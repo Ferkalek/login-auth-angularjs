@@ -1,0 +1,30 @@
+<div class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo"><b>Login/Auth</b></div>
+        <div class="register-box-body">
+            <p class="login-box-msg">Регистрация в систему</p>
+            <form role="form" name="form2" class="not-validation">
+                <div class="form-group has-feedback">
+                    <input type="email" placeholder="Email" class="form-control" ng-model="user.mail" required>
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Пароль" ng-model="user.pass1" required>
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="Подтвердить пароль" ng-model="user.pass2" required>
+                    <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <a href="#/login" class="btn btn-default btn-flat">Войти</a>
+                        <input type="submit" class="btn btn-primary btn-flat pull-right" value="Зарегистрироваться"
+                               ng-disabled="form2.$invalid" ng-click="registration(user)">
+                    </div>
+                </div>
+            </form>
+            <p class="error-msg">{{msgtext}}</p>
+        </div>
+    </div>
+</div>
